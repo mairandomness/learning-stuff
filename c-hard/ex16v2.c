@@ -3,13 +3,14 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct Person {
+struct Person {
 
 	char *name;
 	int age;
 	int height;
 	int weight;
-} who;
+};
+
 
 struct Person Person_create(char *name, int age, int height, int weight)
 {
