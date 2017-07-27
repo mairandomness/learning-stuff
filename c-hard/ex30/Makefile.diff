@@ -1,0 +1,28 @@
+diff --git a/learning-stuff/c-hard/skelly/Makefile b/learning-stuff/c-hard/skelly/Makefile
+index 135d538..21b92bf 100644
+--- a/learning-stuff/c-hard/skelly/Makefile
++++ b/learning-stuff/c-hard/skelly/Makefile
+
+@@ -9,9 +9,10 @@ TEST_SRC=$(wildcard tests/*_tests.c)
+TESTS=$(patsubst %.c, %,$(TEST_SRC))
+
+TARGET=build/libYOUR_LIBRARY.a
++SO_TARGET=$(patsubst %.a, %.so,$(TARGET))
+
+# The Target Build
+-all: $(TARGET) tests
++all: $(TARGET) $(SO_TARGET) tests
+
+dev: CLAGS=-g -Wall -Isrc -Wall -Wextra $(OPTFLAGS)
+dev: all
+
+@@ -21,6 +22,9 @@ $(TARGET): build $(OBJECTS)
+  ar rcs $@ $(OBJECTS)
+  ranlib $@
+
++$(SO_TARGET): $(TARGET) $(OBJECTS)
++ $(CC) -shared -o $@ $(OBJECTS)
++
+  build:
+    @mkdir -p build
+    @mkdir -p bin
