@@ -2,12 +2,14 @@
 
 import tictac as t
 
+
 def main():
     """ main function """
-    #get a board size
+    # get a board size
     good_input = False
     while not good_input:
-        size = input("Enter a number from 3 to 9 for the size of your tic-tac-toe board:")
+        size = input(
+            "Enter a number from 3 to 9 for the size of your tic-tac-toe board:")
         try:
             size = int(size)
             if 2 < size < 10:
@@ -15,16 +17,16 @@ def main():
         except ValueError:
             pass
 
-    #set the board, let's store it as a list
+    # set the board, let's store it as a list
     board = [" "] * size ** 2
     t.display_board(board, size)
     play_count = 0
 
-    #if the game is not won and board is not full, keep asking for plays
+    # if the game is not won and board is not full, keep asking for plays
     while True:
         valid_play = False
 
-        #try to get a valid input from player X
+        # try to get a valid input from player X
         while not valid_play:
             msg = "Player X, input the position of your play as a two digit number, row and column:"
             play_x = input(msg)
@@ -33,8 +35,8 @@ def main():
         board = t.update_board(play_x, board, size, "X")
         play_count += 1
         t.display_board(board, size)
-        #check if game is over
-        #if it is break from the loop
+        # check if game is over
+        # if it is break from the loop
         result = t.is_game_over(play_x, play_count, board, size)
         if result[0] and (result[1] == "Win"):
             print("GAME OVER. PLAYER X WON!!!")
@@ -43,8 +45,8 @@ def main():
             print("GAME OVER. IT'S A DRAW.")
             break
 
-        #if it's not over
-        #try to get a valid input from player O
+        # if it's not over
+        # try to get a valid input from player O
         valid_play = False
         while not valid_play:
             msg = "Player O, input the position of your play as a two digit number, row and column:"
@@ -54,8 +56,8 @@ def main():
         board = t.update_board(play_o, board, size, "O")
         play_count += 1
         t.display_board(board, size)
-        #check if game is over
-        #if it is, break from the loop
+        # check if game is over
+        # if it is, break from the loop
         result = t.is_game_over(play_o, play_count, board, size)
         if result[0] and (result[1] == "Win"):
             print("GAME OVER. PLAYER O WON!!!")
