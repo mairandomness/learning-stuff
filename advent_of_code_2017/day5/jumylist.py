@@ -36,7 +36,8 @@ def main():
         int_lst.append(int(elem))
     i = 0
     count = 0
-    while 0 <= i < len(int_lst):
+    lst_end = len(int_lst)
+    while 0 <= i < lst_end:
         walk = int_lst[i]
         int_lst[i] += 1
         i += walk
