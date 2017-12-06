@@ -1,0 +1,55 @@
+
+==================== FINAL INTERFACE ====================
+2017-12-05 00:42:07.490767 UTC
+
+interface main@main:Main 8002
+  interface hash: 59438cc1773f998f60a18d65de4b4115
+  ABI hash: ffb1bc71ea7a308ca5892508046fbfa1
+  export-list hash: 870cfdc36721b60413767659e685dcaa
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 76ba24270fc5319014e67053f3ebb51a
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.isValid
+  Main.isValidNoAnagrams
+  Main.main
+module dependencies:
+package dependencies: base-4.9.1.0*
+                      day4-0.1.0.0@day4-0.1.0.0-GJPsw0tUQF0Co1DQdu4xbG ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Data.Char 01433d23661edb6e5ef1536ef1e6774c
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:Data.List 07ae2acca6538aa0800bd0a993ac6ac1
+import  -/  base-4.9.1.0:Data.OldList 27987919d8da2f92e3f472ca81f730f8
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:System.IO c9de64c5f5407c4cf1c52500c4d15200
+import  -/  day4-0.1.0.0@day4-0.1.0.0-GJPsw0tUQF0Co1DQdu4xbG:Lib 5e28ddf205d35c87b3495f15cc1c0074
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+83f529351410271e83fed952c86159e1
+  $trModule :: GHC.Types.Module
+12b040578e550df553c8e4230a732258
+  isValid :: GHC.Base.String -> GHC.Types.Bool
+2f2c8b989232c052d37e3cd93042ad49
+  isValidNoAnagrams :: GHC.Base.String -> GHC.Types.Bool
+0d166822e21f7182ece26123ea2cf341
+  main :: GHC.Types.IO ()
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
