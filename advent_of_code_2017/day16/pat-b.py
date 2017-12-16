@@ -56,17 +56,28 @@ def main():
         positions_dict[key] = idx
 
     positions = pd.Series(positions_dict)
+    history = {}
 
-
-    for order in instructions:
-        if order[0] == "s":
-            positions = spin(positions, int(order[1:]))
-        if order[0] == "x":
-            positions = exchange(positions, int(order[1][0]), int(order[1][1]))
-        if order[0] == "p":
-            positions = swap(positions, order[1][0], order[1][1])
-        positions = positions.sort_values()
-    print("".join(list(positions.keys())))
+    for i in range(1000):
+        for order in instructions:
+            if order[0] == "s":
+                positions = spin(positions, int(order[1:]))
+            if order[0] == "x":
+                positions = exchange(positions, int(order[1][0]), int(order[1][1]))
+            if order[0] == "p":
+                positions = swap(positions, order[1][0], order[1][1])
+            positions = positions.sort_values()
+        cur_str = "".join(list(positions.keys()))
+        if cur_str not in history:
+            history[cur_str] = i+1
+        else:
+            loop_size = i + 1 - history[cur_str]
+            remainder = 1000000000 % loop_size
+            for key in history:
+                if history[key] == remainder:
+                    print(key)
+                    break
+            break
 
 
 if __name__ == "__main__":
