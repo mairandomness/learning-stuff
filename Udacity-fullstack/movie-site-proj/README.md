@@ -1,8 +1,10 @@
 # Movies and trailers project
 
-This project consists of a website with movies, it's posters, it's trailer (hosted on youtube)
-plus some additional information.
+This project consists of a website with movies,tis title, posters and trailer (hosted on youtube).
 
-## Altering the website
+## Using this project
 
-To alter the generated website, make changes to the `entertainment_center.py` file. Removing or creating other objects of the class movie and running it will give you a new version of the website.
+1. This project requires python to be installed to work
+2. Clone or download this repository
+3. Make alterations to `entertainment_center.py` if you want to change or add the movies that are being displayed. (Changes like adding and displaying other information per movie will require changes in all files)
+4. In the folder it's saved, run `python entertainment_center.py` in your terminal. This should create a html file for the website and open it in your browser.
