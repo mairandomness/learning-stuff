@@ -1,0 +1,23 @@
+
+
+
+* {
+	font-family: 'Carrois Gothic', sans-serif;
+}
+
+article {
+	text-align: center;
+}
+
+/* html { */
+/* 	background-color: #BEE3DB; */
+/* } */
+
+
+.align-right {
+	text-align: right;
+}
+
+.centralize {
+	text-align: center;
+}
