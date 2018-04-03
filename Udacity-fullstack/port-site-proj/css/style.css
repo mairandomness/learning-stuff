@@ -92,25 +92,6 @@ img {
 
 /* Medium */
 @media all and (max-width: 800px) {
-.row {
-  display: flex;
-  /* flex-flow: row wrap; */
-  /* justify-content: flex-end; */
-}
-
-.small-items {
-  min-width: 0;
-  margin-top: 0px;
-  width: 33%;
-}
-
-.middle-item {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-/* Medium */
-@media all and (max-width: 800px) {
   .row {
     justify-content: space-around;
     flex-wrap: wrap;
@@ -122,8 +103,6 @@ img {
   width: 70%;
   }
 }
-
-
 
 /* Small */
 @media all and (max-width: 500px) {
