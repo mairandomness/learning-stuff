@@ -1,0 +1,6 @@
+[package]
+name = "crackle-pop"
+version = "0.1.0"
+authors = ["mairandomness <mairakodama@gmail.com>"]
+
+[dependencies]
