@@ -2,7 +2,8 @@
 .stack-work/
 
 #virtualenv
-**/env/**
+*/env/*
+*.whl
 
 # django projects
 *.pyo
