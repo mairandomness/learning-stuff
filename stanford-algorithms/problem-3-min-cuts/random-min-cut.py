@@ -9,10 +9,10 @@ def merge_nodes (random_edge, edges):
     for edge in edges:
         if edge[0] == random_edge[1]:
             edge[0] = random_edge[0]
-            edge.sort();
+            edge.sort()
         if edge[1] == random_edge[1]:
             edge[1] = random_edge[0]
-            edge.sort();
+            edge.sort()
     return edges
 
 def get_number_of_nodes (edges):
