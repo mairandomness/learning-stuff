@@ -2,8 +2,6 @@
 # sys.setrecursionlimit(100000)
 
 def quicksort(counter, input_list):
-    smaller = []
-    larger = []
     if len(input_list) > 1:
     # to implement one day in the future?
         return (counter, lst)
